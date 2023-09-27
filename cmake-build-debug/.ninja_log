@@ -1,0 +1,11 @@
+# ninja log v5
+70	1676	7174998554663430	CMakeFiles/hanoy_tower.dir/main.cpp.obj	3dfcd9169b6f9dde
+5	2641	7174998758196928	hanoy_tower.exe	2bc5be151d814fbd
+6	2347	7175031289233405	build.ninja	dcb062b86ec8b25b
+14	827	7175031289233405	build.ninja	dcb062b86ec8b25b
+24	5020	7175031341997549	CMakeFiles/hanoy_tower.dir/Line.cpp.obj	c19fc5fb28c81055
+6	966	7175034739441886	CMakeFiles/hanoy_tower.dir/main.cpp.obj	3dfcd9169b6f9dde
+7	2906	7175035294100548	CMakeFiles/hanoy_tower.dir/Line.cpp.obj	c19fc5fb28c81055
+2908	3382	7175035298833446	hanoy_tower.exe	30f65c47ef4e5b9e
+8	4638	7175035497285345	CMakeFiles/hanoy_tower.dir/Line.cpp.obj	c19fc5fb28c81055
+4640	4910	7175035500121372	hanoy_tower.exe	30f65c47ef4e5b9e
