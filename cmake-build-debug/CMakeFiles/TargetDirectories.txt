@@ -1,3 +1,3 @@
-C:/Users/sch-57-d25/CLionProjects/hanoy-tower/cmake-build-debug/CMakeFiles/hanoy_tower.dir
-C:/Users/sch-57-d25/CLionProjects/hanoy-tower/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/sch-57-d25/CLionProjects/hanoy-tower/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/sch-57-d25/1/cmake-build-debug/CMakeFiles/hanoy_tower.dir
+C:/Users/sch-57-d25/1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sch-57-d25/1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

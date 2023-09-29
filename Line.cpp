@@ -32,52 +32,43 @@ bool Line::isFilled() {
 }
 
 Line Line::removeTopElement() {
+    unsigned char elements1[8];
+    elements1[topOneIndex()] = 0;
     Line newLine;
-    newLine.setElements(elements);
-    newLine[topOneIndex()] = 0;
+    newLine.setElements(elements1);
     return newLine;
 }
 
-Line Line::addElement(byte element) {
+Line Line::addElement(unsigned char element) {
     // we don't check if there is any space left, cause there are n elements and size of tower we want to move
     // and element to move is n-1 at max
+    unsigned char elements1[8];
+    memcpy(elements1, elements, 8);
+    int additionalIndex = (topOne() == 0) ? 0 : -1;
+    elements1[topOneIndex() + additionalIndex] = element;
     Line copy;
-    int additionalIndex = (topOne() == 0) ? 0: -1;
-    copy[topOneIndex()+additionalIndex] = element;
+    copy.setElements(elements1);
     return copy;
 }
 
 bool Line::isEmpty() {
-    return elements.last() == 0.toByte()
+    return elements[7] == 0;
 }
 
 int Line::topOne() {
     // we use the fact, that they are always sorted like this 0, 1, 2, 3, 4...
-    elements.forEachIndexed
-    {
-        index, i->
-        if (i != 0.toByte() || index == 7) return i.toInt()
-    }
-    // This never happens
-    throw IllegalStateException()
-}
-
-int Line::topOneIndex() {
-    // we use the fact, that they are always sorted like this 0, 1, 2, 3, 4...
-    for (int index: elements.size()) {
-        if (elements[index] != 0.toByte() || index == 7) return index;
+    for (int index = 0; index < 8; index++) {
+        if (elements[index] != 0 || index == 7) return elements[index];
     }
     // This never happens
     throw;
 }
-/*
-class Line1 {
-public:
-    Line(unsigned char string[8]) {
-        Line c1 = Line(nullptr);
-        memcpy(c1.elements, string, 8);
+
+int Line::topOneIndex() {
+    // we use the fact, that they are always sorted like this 0, 1, 2, 3, 4...
+    for (int index = 0; index < 8; index++) {
+        if (elements[index] != 0 || index == 7) return index;
     }
-
-
-};
-*/
+    // This never happens
+    throw;
+}
